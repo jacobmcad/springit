@@ -8,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-@NoArgsConstructor
-@Data
 public class Vote {
 
     @Id
