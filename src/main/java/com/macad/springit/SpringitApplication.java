@@ -26,6 +26,9 @@ public class SpringitApplication {
             Link link = new Link("Getting Started with Spring Boot 2", "https://therealdanvega.com/spring-boot-2");
             linkRepository.save(link); //Spring Data JPA in action here...
 
+            Link secondLink = new Link("Second link is saved", "www.google.com");
+            linkRepository.save(secondLink);
+
             Comment comment = new Comment("This Spring Boot 2 link is not awesome", link);
             commentRepository.save(comment);
             link.addComment(comment);
