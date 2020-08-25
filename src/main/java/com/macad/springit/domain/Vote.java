@@ -1,21 +1,27 @@
 package com.macad.springit.domain;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import lombok.*;
+
+import javax.persistence.*;
+
 
 @Entity
-public class Vote {
+@NoArgsConstructor
+@RequiredArgsConstructor
+@Getter
+@Setter
+public class Vote extends Auditable{
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private int vote;
 
-    // user
-    // link
+    @NonNull
+    private short direction;
 
-
+    @ManyToOne
+    @NonNull
+    private Link link;
 
 }

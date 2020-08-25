@@ -32,10 +32,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .usernameParameter("email")
                 .and()
-                .logout().and().rememberMe();
-//            .and()
-//                .csrf().disable()
-//                .headers().frameOptions().disable();
+                .logout().and().rememberMe()
+            .and()
+                .csrf().disable()
+                .headers().frameOptions().disable();
 
     }
 
