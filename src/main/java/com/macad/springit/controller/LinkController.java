@@ -18,7 +18,7 @@ public class LinkController {
 
     private static final Logger logger = LoggerFactory.getLogger(LinkController.class);
 
-    private LinkRepository linkRepository;
+    private final LinkRepository linkRepository;
 
     public LinkController(LinkRepository linkRepository) {
         this.linkRepository = linkRepository;

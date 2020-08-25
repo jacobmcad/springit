@@ -26,7 +26,6 @@ public class Link extends Auditable{
     private Long id;
 
     @NonNull
-    @NotEmpty(message = "Please enter a title.")
     private String title;
 
     @NonNull
@@ -35,7 +34,6 @@ public class Link extends Auditable{
     private String url;
 
     @NonNull
-    @NotEmpty(message = "Please enter a description")
     private String description;
 
     @OneToMany(mappedBy = "link")
